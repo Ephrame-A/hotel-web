@@ -1,0 +1,120 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    height: 40vh;
+ color: white;
+    align-items:flex-start;
+    background: url("https://th.bing.com/th/id/R.aaa4fc454c26605b2717f51a081816b4?rik=EEabJ%2fQ%2b8d7aow&pid=ImgRaw&r=0") no-repeat center;
+    background-size: cover;
+   
+    padding: 1%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#toggler{
+    width: 10vw;
+    height: 8vh;
+    display: none;
+}
+#area{
+    margin: 10%
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+#body{
+    position: relative;
+    display: flex;
+    background-color: white;
+    background-size: cover;
+    flex-direction: column;
+   
+    color: pink;
+    height: 300vh; 
+    align-items: center;
+    
+}
+#body::before{
+    content: "";
+    z-index: -1;
+}
+.animated{
+ 
+        opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Start slightly lower */
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+.animated > img{
+    width: 90vw;
+    height: 70vh;
+    display: none;
+    margin: 5% 10% 5% 3%;
+  
+   box-shadow: 5px 5px 7px 0px black;
+   border-radius: 2%;
+}
+.spacer{
+    height: 100vh;
+}
+.animated.visible{
+    opacity: 1; /* Visible when added class */
+    transform: translateY(0);
+}
+#signin{
+    display: flex;
+    flex-direction: column;
+    padding: 5%
+}
+#signin > input{
+    width: 50vw;
+    margin: 0 4% 0 11%;
+}
+#container > p{
+    margin-left: 5%
+}
+footer{
+    
+    background: url("https://th.bing.com/th/id/OIP.nvuu8O7yYCtoLrSHW4ou2wHaEK?w=237&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7") no-repeat;
+    background-size: cover;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  padding: 2%;
+    border-top: 1px solid blue;
+    color: white
+}
+i{
+    margin: 1%
+}
+#social{
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 600px){
+#navmenu{
+    display: none
+}
+#toggler{
+    display: block
+}
+}
+@media(min-width: 700px){
+    #body{
+        height: 420vh
+    }
+.animated > img{
+    width: 70vw;
+    height: 90vh
+}
+}
